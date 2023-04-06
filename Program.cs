@@ -1,13 +1,14 @@
-﻿using GiftBox.Code.CandyItems;
+﻿using System.Text;
 
 namespace GiftBox.Code
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Starter.Run();
+            Console.OutputEncoding = Encoding.UTF8;
 
+            Starter.Run();
         }
     }
 }

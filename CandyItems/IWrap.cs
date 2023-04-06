@@ -11,7 +11,6 @@ namespace GiftBox.Code.CandyItems
         void Wrap()
         {
             Console.WriteLine("Default");
-            int total = 0;
         }
     }
 }

@@ -8,15 +8,16 @@ namespace GiftBox.Code.CandyItems
 {
     public class Product : IComparable
     {
-        public string Name { get; set; }
-        public double Weight { get; set; }
-        public double Kkal { get; set; }
         public Product(string name, double weight, double kKal)
         {
             Name = name;
             Weight = weight;
             Kkal = kKal;
         }
+
+        public string Name { get; set; }
+        public double Weight { get; set; }
+        public double Kkal { get; set; }
 
         public int CompareTo(object? obj)
         {

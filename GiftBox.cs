@@ -1,9 +1,9 @@
-﻿using GiftBox.Code.CandyItems;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GiftBox.Code.CandyItems;
 
 namespace GiftBox.Code
 {
@@ -12,8 +12,6 @@ namespace GiftBox.Code
         private static Product[] _giftBoxList;
         private static int arrLength = 0;
         private static int j = 0;
-
-        public Product[] GiftboxList { get; set; }
 
         public void AddGift(Product gift, int quant)
         {
@@ -36,6 +34,7 @@ namespace GiftBox.Code
                 num++;
             }
         }
+
         public void CompareCalories()
         {
             Array.Sort(_giftBoxList);
