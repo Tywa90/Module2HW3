@@ -9,30 +9,24 @@ namespace GiftBox.Code
 {
     public class Starter
     {
-        private static Product[] _productsList;
+
         public static void Run()
         {
-            
             Praline redMack = new Praline("Червоний мак", 17, 88.4, 8.1, "crumbly", "black", "Карамельна крихта, паста ядер горіхів");
             Praline karakum = new Praline("Кара-кум", 15.9, 85.1, 8.2, "crumbly", "black", "Карамельна крихта, паста ядер горіхів");
             Caramel cow = new Caramel("Корівка", 16.2, 60.8, 10.85, "soft", "Ніжна молочна помадка");
             ChocoPlate ritter = new ChocoPlate("Шоколад Ritter-Sport", 100, 627, 24, "solid", "black", "молочний");
 
-            GiftBox.Wrap();
+            GiftBox boxStart = new GiftBox();
+            boxStart.AddGift(redMack, 2);
+            boxStart.AddGift(karakum, 3);
+            boxStart.AddGift(cow, 3);
+            boxStart.AddGift(ritter, 1);
 
-            _productsList = new Product[] { redMack, karakum, cow, ritter };
-
-            DisplayBox();
+            boxStart.Wrap();
+            boxStart.CompareCalories();
 
         }
 
-        public static void DisplayBox()
-        {
-            foreach (var item in _productsList)
-            {
-                Console.WriteLine(item.Name);
-            }
-        }
-      
     }
 }

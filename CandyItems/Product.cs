@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GiftBox.Code.CandyItems
 {
-    public class Product
+    public class Product : IComparable
     {
         public string Name { get; set; }
         public double Weight { get; set; }
@@ -17,6 +17,11 @@ namespace GiftBox.Code.CandyItems
             Weight = weight;
             Kkal = kKal;
         }
-        
+
+        public int CompareTo(object? obj)
+        {
+            Product product = obj as Product;
+            return Kkal.CompareTo(product.Kkal);
+        }
     }
 }
