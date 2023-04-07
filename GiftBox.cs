@@ -13,6 +13,11 @@ namespace GiftBox.Code
         private static int arrLength = 0;
         private static int j = 0;
 
+        public static Product[] GiftBoxList
+        {
+            get { return _giftBoxList; }
+        }
+
         public void AddGift(Product gift, int quant)
         {
             for (int i = 0; i < quant; i++)
@@ -26,7 +31,7 @@ namespace GiftBox.Code
 
         public void Wrap()
         {
-            Console.WriteLine($"Box is packed with items inside:");
+            Console.WriteLine($"Подарок собран и упакован:");
             int num = 1;
             foreach (var item in _giftBoxList)
             {
@@ -38,10 +43,6 @@ namespace GiftBox.Code
         public void CompareCalories()
         {
             Array.Sort(_giftBoxList);
-            for (int k = 0; k < _giftBoxList.Length; k++)
-            {
-                Console.WriteLine($"{_giftBoxList[k].Name} = {_giftBoxList[k].Kkal}KCal");
-            }
         }
     }
 }

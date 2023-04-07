@@ -14,6 +14,7 @@ namespace GiftBox.Code
             {
                 Console.WriteLine(item);
             }
+
             return arr;
         }
     }
