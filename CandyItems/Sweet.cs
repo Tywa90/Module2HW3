@@ -9,11 +9,12 @@ namespace GiftBox.Code.CandyItems
 {
     public class Sweet : Product
     {
-        public double ShugarIn { get; set; }
         public Sweet(string name, double weight, double kKal, double shugarIn)
-            :base(name, weight, kKal)
+            : base(name, weight, kKal)
         {
             ShugarIn = shugarIn;
         }
+
+        public double ShugarIn { get; set; }
     }
 }

@@ -8,11 +8,12 @@ namespace GiftBox.Code.CandyItems
 {
     public class Caramel : Candy
     {
-        public string CaramelStruct { get; set; }
         public Caramel(string name, double weight, double kKal, double shugarIn, string softness, string caramelStruct)
             : base(name, weight, kKal, shugarIn, softness)
         {
             CaramelStruct = caramelStruct;
         }
+
+        public string CaramelStruct { get; set; }
     }
 }
